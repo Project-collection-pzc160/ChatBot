@@ -1,0 +1,22 @@
+{
+  "pages":[
+
+    "pages/chat/chat",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#279964",
+    "navigationBarTitleText": "(●—●)大白在线聊天~",
+    "navigationBarTextStyle":"white"
+  },
+  "plugins":{
+    "WechatSI": {
+      "version":"0.3.5",
+      "provider":"wx069ba97219f66d99"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

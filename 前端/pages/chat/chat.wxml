@@ -1,0 +1,71 @@
+<!-- 可滚动的聊天区域 -->
+<view class='scorll' style='background-image:url(/images/background.jpeg)'> 
+<scroll-view selectable="true" scroll-y="true" class='scrolly'scroll-top="{{scrollTop}}">      
+    <view wx:for="{{msgs}}" wx:for-index="idx" wx:for-item="itemName">  
+    <!-- 需要读取消息的索引号和对应值，后面根据索引号的奇偶对机器人与用户的消息进行区分，分别处理 -->
+    <!-- 机器人消息处理 -->
+    <block wx:if="{{idx%2 == 0}}"> 
+      <view style='display: flex; padding: 2vw 11vw 2vw 2vw;'>
+        <!-- 读取机器人头像图片 -->
+        <view style='width: 11vw; height: 11vw;'>
+          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src="/images/dabai1.jpeg"></image>
+        </view>
+        <!-- 头像和消息之间的间隔 -->
+        <view style='width: 4vw; height: 11vw; margin-left: 0.5vw; display: flex; align-items: center; z-index: 9;'> 
+          <image style='width: 4vw;' src="" mode='widthFix'></image>
+        </view>
+        <!-- 机器人消息 -->
+        <view class='leftMsg'>{{itemName.msg}}</view>
+      </view>
+    </block>  
+    <!-- 用户消息处理 -->
+    <block wx:if="{{idx%2 != 0}}">
+      <view  style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 11vw;'>
+        <!-- 用户消息 -->
+        <view class='rightMsg'>{{itemName.msg}}</view>
+        <!-- 头像和消息之间的间隔 -->
+        <view style='width: 4vw; height: 11vw; margin-right: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+          <image style='width: 4vw;' src='' mode='widthFix'></image>
+        </view>
+        <!-- 读取用户头像图片 -->
+        <view style='width: 11vw; height: 11vw;'>
+          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='{{userInfo.avatarUrl}}'></image>
+        </view>
+      </view>
+    </block>  
+    </view>  
+</scroll-view>  
+</view>
+<!-- 固定的底部消息发送框 -->
+    <view class="buu">
+      <!-- 输入期间自动读取数据到变量中存储 -->
+      <input style="width: 432rpx; height: 68rpx; display: block; box-sizing: border-box" placeholder="闲着没事，不如聊两句"
+        type="text" class="input-text" bindinput="setInputValue" value="{{inputdata}}" />
+      <!-- 点击发送按钮自动调用获取用户数据的函数，以得到用户头像进行显示，同时函数里也进行消息的发送，显示返回结果 -->
+      <button bindgetuserinfo="getUserInfo" open-type="getUserInfo" class="input-button"
+        style="position: relative; left: 86rpx; top: 0rpx; width: 233rpx; height: 68rpx; display: flex; box-sizing: border-box">发送</button>
+      <!-- 语音输入按钮，长按将语音转化为文字 -->
+      <button class="img-button" plain="true" bindtouchstart="touchStart" bindtouchend="touchEnd"
+        style="position: relative; left: -225rpx; top: 5rpx; width: 80rpx; height: 68rpx; display: block; box-sizing: border-box"> 
+        <image class="voice-img" src='/images/voice1.png'  style="width: 80rpx; height: 68rpx; display: inline-block; box-sizing: border-box"></image> 
+      </button>
+      <!-- 开始语音 弹出语音图标表示正在录音 -->
+      <cover-view class="startYuyinImage" wx:if="{{recordState == true}}">
+        <cover-image src="/images/voice2.png"></cover-image>
+        <cover-view>语音输入中...</cover-view>
+      </cover-view>
+    </view>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+

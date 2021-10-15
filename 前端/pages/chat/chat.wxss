@@ -1,0 +1,255 @@
+/* pages/chat/chat.wxss */
+/*设置scroll-view的父元素的的样式*/
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} 
+
+button {
+  padding: 0;
+  background: #fff;
+}
+.button-hover {
+  background: #fff;
+}
+
+/*聊天区域*/
+.scorll{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+}
+.scrolly
+{
+  width:100%;
+  height:100%;
+}
+
+.slide-image{  
+    width: 100%; 
+    height: 300rpx; 
+}
+/*文字输入框*/
+.input-text{  
+border:1px solid #abcdef;  
+width:60%; 
+line-height:100%;  
+text-indent: 0.5rem;  
+height:85rpx;  
+margin-top:5rpx;
+}  
+/*发送按钮*/
+.input-button{      
+color:#fff;  
+font:bold;
+background: #279964;
+width: 30%;
+height: 87rpx;
+vertical-align: middle;
+text-align: center;
+margin-top:5rpx;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 98rpx; 
+}
+/*语音输入按钮图像*/
+.voice-img{
+  width: 80rpx;
+  height: 80rpx;
+}
+/*语音输入按钮*/
+.img-button[plain]{
+  width: 80rpx;
+  height: 80rpx;
+  padding: 0;
+  border: none;
+} 
+/*显示语音输入中图像*/
+.startYuyinImage {
+  position: fixed;
+  top: 320rpx;
+  left: 50%;
+  width: 240rpx;
+  height: 240rpx;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20rpx;
+  color: #fff;
+  text-align: center;
+  margin-left: -95rpx;
+}
+ 
+.startYuyinImage cover-image {
+  margin: 30rpx auto;
+  width: 100rpx;
+  height: 100rpx;
+}
+ 
+.startYuyinImage cover-view {
+  margin-top: 25rpx;
+}
+
+
+.chat-area{  
+    width: 90%;  
+    margin:0.5rem 5%;  
+    border:1px solid #ddd;  
+    opacity: 0.9;
+    font-size: 1rem;  
+   
+}
+/*  
+.red-font{  
+    color:#DC143C;  
+}  
+.green-font{  
+    color:#48C23D;  
+}  
+.say-content{  
+font-size:80%;  
+width:90%;  
+margin:0.5rem 5%;  
+}  
+.say-contentt{  
+font-size:80%;  
+width:100%;  
+margin-right: auto;
+text-align: center;
+margin-left: auto ;
+align-content: center;
+}  
+.textview {
+  width:100%;
+  border-radius: 10rpx;
+  background: #d5eaf8;
+  padding: 20rpx;
+}
+.triangle image{
+  width: 20rpx;
+  height: 80rpx;
+}
+.textview2 {
+   width:100%;
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx;
+}
+
+.img-plus-style { 
+ height: 70rpx; 
+ width: 70rpx; 
+ position: fixed; 
+ bottom: 220rpx; 
+ right: 30rpx; 
+ opacity: 0.7
+} 
+.img-plus-style1 { 
+ height: 70rpx; 
+ width: 70rpx; 
+ position: fixed; 
+ bottom: 130rpx; 
+ right: 30rpx; 
+ opacity: 0.7
+}
+*/ 
+.zindex100{z-index: 100}
+.yc{opacity: 0}
+
+
+page {
+  background-color: #f1f1f1;
+}
+
+.inputRoom {
+  width: 100vw;
+  height: 16vw;
+  border-top: 1px solid #cdcdcd;
+  background-color: #f1f1f1;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: 20;
+}
+
+input {
+  width: 76vw;
+  height: 9.33vw;
+  background-color: #fff;
+  border-radius: 40rpx;
+  margin-left: 2vw;
+  padding: 0 3vw;
+  font-size: 28rpx;
+  color: #444;
+}
+
+/*机器人消息*/
+.leftMsg {
+  font-size: 35rpx;
+  color: #444;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #dbdbdb;
+  margin-left: -1.6vw;
+  border-radius: 10rpx;
+  z-index: 10;
+}
+/*用户消息*/
+.rightMsg {
+  font-size: 35rpx;
+  color: #444;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #96EB6A;
+  margin-right: -1.6vw;
+  border-radius: 10rpx;
+  z-index: 10;
+}
+/*
+#comments .input{
+    border-top: 0.5px solid #eff2f7;
+    padding-top:5px;
+    padding-left:10px;
+}
+#comments .input .text{
+    width:50%;
+    height:39px;
+    background: #eeeeee;
+    border-radius: 7px;
+    font-size:17px;
+    text-indent: 10px;
+    padding-left:10px;
+    float: left;
+}
+#comments .input .submit{
+    width:35%;
+    height:39px;
+    float: left;
+    margin-left:6px;
+    padding:0px;
+    text-align: center;
+    line-height:39px;
+    background:#3581be;
+    font-size:17px;
+    color:#fff;
+}
+*/
+
+/*底部区域*/
+.buu{
+  height: 100rpx;
+position:fixed;  
+bottom:0;
+width:100%;
+display: flex;
+direction: row;
+background-color: #ffffff;
+border-top:1px solid #cdcdcd;  
+}
