@@ -8,6 +8,7 @@
 
 ![img](https://imglf3.lf127.net/img/aEpOalRwZHRiUi8wcmw3enpxYXBLWTJiTDlaekIwcUx3eFVsc2VjaW5VL0NjRDBaM1Z3TTdBPT0.png)
 
+-  训练挑选的机器模型因超过100M，无法上传，文件夹里只有对应的语料库和分词词典，训练模型获取见百度云链接： https://pan.baidu.com/s/1gyD7JIKMUtV4OWHs58P37w  提取码：6zlg
 -  flask后端主要是初始化机器模型，并设置路由对小程序发来的请求进行响应
 
 - flask后端和机器模型均已放至服务器端，具体部署见相关markdown
