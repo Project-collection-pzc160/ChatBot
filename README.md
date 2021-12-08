@@ -13,7 +13,7 @@
 
 - flask后端和机器模型均已放至服务器端，具体部署见相关markdown
 
-- web服务器目前还在运行，小程序端开启不校验合法域名，可运行程序：
+- 运行程序结果如下：
 
 ![img](https://imglf4.lf127.net/img/RnA0T1dLRXBhZHpSTnlPeUlSUW44a3hRd1hmVDVaUlFRaGFvNVM3R1U1NENWTzZmYkV5ZEZBPT0.png)
 
